@@ -15,7 +15,8 @@
 :root {     
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
     --main-color : #a15832;
-    --secondary-color : #d2997a;
+    /* --secondary-color : #d2997a; */
+    --secondary-color: #ea4b11;
     --light-color: #d8d0d0;
 }
 
@@ -157,6 +158,111 @@ section {
 
 
 
+/* Products */
+
+.sub-heading { 
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1rem
+}
+
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--main-color);
+    padding-top: 2rem;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+    
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    padding: 1rem 0;
+}
+.box-image-container img {
+    width: 500px;
+    height: 500px;
+}
+
+.box-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.box .fa-heart, 
+.box .fa-eye {
+    background-color: #eee;
+    position: absolute;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.box .fa-heart:hover, 
+.box .fa-eye:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.box .fa-heart { 
+    left: -15rem;
+    top: 2rem;
+}
+
+.box .fa-eye {
+    right: -15rem;
+    top: 2%;
+}
+
+
+.box:hover .fa-heart{
+    left: 75%;
+    top: 4%;
+}
+
+.box:hover .fa-eye{
+    right: 4%;
+    top: 4%;
+}
+
+.box h3 {
+    margin: 1rem;
+    color: var(--main-color);
+    font-size: 2rem
+}
+
+.box .stars{
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    
+}
+
+.box .stars i {
+    cursor: pointer;
+}
+.box span{
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 /* media queries */
 @media (max-width: 1470px){
     header {
@@ -241,6 +347,30 @@ section {
         font-size: 1rem;
     }
 
+    /* products cards */
+    .box-container { 
+        grid-template-columns: auto;
+    }
+
+    .box img {
+        width: 300px;
+        height: 300px;
+        
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+    .sub-heading {
+        font-size: 1.5rem;
+    }
+
+    .box:hover .fa-heart{
+        left: 64%;
+        top: 4%;
+    }
+    
+    
 }
 
 
@@ -266,6 +396,22 @@ section {
     }
     .btn {
         font-size: 1rem;
+    }
+
+    /* products cards */
+    .box-container { 
+        grid-template-columns: auto;
+    }
+
+    .box img {
+        width: 200px;
+        height: 200px;
+        
+    }
+
+    .box:hover .fa-heart{
+        left: 48%;
+        top: 4%;
     }
     
 }

@@ -7,7 +7,6 @@
     box-sizing: border-box;
     font-family: 'Life Savers', cursive;
     text-decoration: none;
-    text-transform: capitalize;
     transition: all .2s linear;
   
 }
@@ -90,8 +89,11 @@ header .icons #menu-bars {
 /* home */
 
 section { 
-    padding: 2rem 9%;
-    
+    padding: 2rem 9%;  
+}
+
+section:nth-child(even){
+    background-color: var(--light-color);
 }
 
 
@@ -158,7 +160,6 @@ section {
 }
 
 
-
 /* Products */
 
 .sub-heading { 
@@ -171,7 +172,7 @@ section {
     font-size: 4rem;
     text-align: center;
     color: var(--main-color);
-    padding-top: 2rem;
+    padding: 2rem 0;
 }
 
 .box-container {
@@ -265,6 +266,36 @@ section {
     font-weight: bold;
 }
 
+/* About */
+
+
+.about-container {
+    display: flex;
+    justify-content: center;
+   /* align-items: center; */
+}
+.video-background {
+    text-align: center;
+}
+.video-background video{
+    border-radius: 50%;
+
+}
+.about-info {
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.about-info p {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2.5rem;
+    letter-spacing: .1rem;
+}
+.about-info h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
 
 /* reviews section */
 
@@ -293,6 +324,11 @@ section {
         padding: 1rem 1rem;
         font-size: 1.4rem;
     }
+
+    /* about */
+    .about-container {
+        flex-wrap: wrap;
+    }
 }
 @media (max-width: 1280px){
     header {
@@ -300,7 +336,7 @@ section {
     }
     header .navbar a { 
         padding: .5rem .5rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
 }
@@ -324,6 +360,23 @@ section {
         font-size:1.5rem;
         padding: 1rem 0;
         line-height: 3rem;
+    }
+
+    /* about */
+    .about-container .video-background video{
+        width: 50%;
+        height: auto;
+    }
+
+    .about-container .about-info h3{
+        font-size: 1.5rem;
+    }
+    .about-container .about-info p{
+        font-size: 1.1rem;
+        line-height: normal;
+    }   
+    .about-container .about-info img{
+        width: 40%;
     }
     
 }
@@ -392,9 +445,7 @@ section {
     .box:hover .fa-heart{
         left: 64%;
         top: 4%;
-    }
-    
-    
+    } 
 }
 
 
@@ -438,4 +489,13 @@ section {
         top: 4%;
     }
     
+    /* about */
+    .about-container .about-info h3{
+        font-size: 1rem;
+    }
+    .about-container .about-info p{
+        font-size: .9rem;
+        line-height: normal;
+    }   
+
 }

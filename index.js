@@ -1,5 +1,50 @@
 // for product view modal
 
+let productObj = [
+belly = {
+        img : ["index_embed/products/belly/AJO_main.jpg", "index_embed/products/belly/AJO_open.jpg","index_embed/products/belly/AJO_close.jpg","index_embed/products/belly/AJO_chopped.jpg",
+        "index_embed/products/belly/AJO_chopped_open.jpg"]
+    },
+]
+
+let swiperModalWrapper = document.querySelector('.product-wrapper');
+let swiperModalWrapper2 = document.querySelectorAll('.product-wrapper')[1];
+
+
+
+for (product in productObj){    
+    let img = productObj[product].img
+
+    img.forEach((value, index)=>{
+        let divElementOne = elementGenerator('div', 'class', 'swiper-slide product-slide'); 
+        let imgElementOne = elementGenerator('img', 'src', value);
+        let divElementTwo = elementGenerator('div', 'class', 'swiper-slide product-slide'); 
+        let imgElementTwo = elementGenerator('img', 'src', value);
+        
+        divElementOne.appendChild(imgElementOne)
+        divElementTwo.appendChild(imgElementTwo)
+
+        swiperModalWrapper.appendChild(divElementOne)
+        swiperModalWrapper2.appendChild(divElementTwo)
+        
+    })
+}
+
+
+
+// A function to generate element with attribute
+
+function elementGenerator(element, attribute, value){
+    let mainEl = document.createElement(element);
+    let mainAttr = document.createAttribute(attribute);
+    mainAttr.value = value;
+    mainEl.setAttributeNode(mainAttr);
+
+    return mainEl
+}
+
+
+
 let viewProduct = document.querySelectorAll('.fa-eye');
 let productModal = document.querySelector('.modal-overlay');
 let productCloseBtn = document.querySelector('.fa-times')

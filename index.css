@@ -63,23 +63,25 @@ html {
     transform: rotate(360deg);
 }
 
+.modal-for-view { 
+    width: 100%;
+    height: 720px;
+    margin: 5rem 0;
+    background-color: #fff;
+}
+
 .product-info-container { 
     display: flex;
-    width: 100%;
-    height: 850px;
-    border: 2px solid yellow;
-    margin: 5rem 0;
 }
 .product-info-thumbnail {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    width: 50%;
+    height: 720px;
+    padding: 2rem;
 }
 
 .product-info-thumbnail .swiper.product-swiper2{
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 .product-info-thumbnail .swiper.product-swiper2 .swiper-slide{
     text-align: center;
@@ -98,9 +100,10 @@ html {
 
 .product-info-thumbnail .swiper.product-swiper{
     width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 10px 0;
+    
 }
 
 .product-info-thumbnail .swiper.product-swiper .swiper-slide{
@@ -108,17 +111,9 @@ html {
     background-position: center;
 }
 
-.product-info-thumbnail .product-swiper {
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
-}
-
 .product-info-thumbnail .product-swiper .swiper-wrapper{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+    justify-content: center; 
+
 }
 .product-info-thumbnail .product-swiper .swiper-slide {
     width: 25%;
@@ -136,6 +131,21 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+
+
+.product-info { 
+    width: 50%;
+    height: 720px;
+}
+
+.product-info {
+    font-size: 2rem;
+    line-height: 2;
+    padding: 8rem 0;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
 /* navbar */

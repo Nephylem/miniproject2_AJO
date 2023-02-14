@@ -24,6 +24,120 @@ html {
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
 }
+
+
+/* modal for view btn */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    background-color: rgba(0,0,0,.8);
+    display: none;
+}
+
+.modal-overlay.active {
+    display: block;
+}
+
+.fa-times { 
+    font-size: 2rem;
+    line-height: 2rem;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: .5rem;
+    background-color: var(--main-color);
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    cursor: pointer;
+}
+
+.fa-times:hover {
+    transform: rotate(360deg);
+}
+
+.product-info-container { 
+    display: flex;
+    width: 100%;
+    height: 850px;
+    border: 2px solid yellow;
+    margin: 5rem 0;
+}
+.product-info-thumbnail {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info-thumbnail .swiper.product-swiper2{
+    width: 100%;
+    height: 100%;
+}
+.product-info-thumbnail .swiper.product-swiper2 .swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-info-thumbnail .swiper.product-swiper2 .swiper-slide img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-info-thumbnail .swiper.product-swiper{
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-info-thumbnail .swiper.product-swiper .swiper-slide{
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info-thumbnail .product-swiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.product-info-thumbnail .product-swiper .swiper-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.product-info-thumbnail .product-swiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.product-info-thumbnail .product-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+
+.product-info-thumbnail .product-swiper .swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* navbar */
 header { 
     position: sticky;
@@ -287,14 +401,14 @@ section:nth-child(even){
 
 /* reviews section */
 
-.swiper {
+.reviews-swiper {
     width: 100%;
     height: 100%;
   }
 
 
 
-  .swiper-slide img {
+  .reviews-swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;

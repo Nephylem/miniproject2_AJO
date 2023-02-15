@@ -1,7 +1,6 @@
 // for product view modal
 
 
-
 let productObj = {
     belly_img : ["index_embed/products/belly/AJO_main.jpg", "index_embed/products/belly/AJO_open.jpg","index_embed/products/belly/AJO_close.jpg","index_embed/products/belly/AJO_chopped.jpg",
     "index_embed/products/belly/AJO_chopped_open.jpg"],
@@ -15,7 +14,6 @@ let productObj = {
     vinegar_img : ["index_embed/products/vinegar/vinegar1.jpg", "index_embed/products/vinegar/vinegar2.jpg"],
     vinegar_text : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam cum iste nobis, id ut, nesciunt nulla, in quod debitis exercitationem dignissimos asperiores perferendis? Quaerat alias voluptatum nostrum voluptas dolorum?",
 }
-
 
 modalInfoGallery(productObj.belly_img, productObj.belly_text, 0)
 modalInfoGallery(productObj.chili_garlic_img,productObj.chili_garlic_text, 1)
@@ -66,9 +64,6 @@ function modalInfoGallery(objImg, objText, productIndex){
 }
 
 
-
-
-
 // A function to generate element with attribute
 
 function elementGenerator(element, attribute, value){
@@ -81,7 +76,7 @@ function elementGenerator(element, attribute, value){
 }
 
 
-
+// product modal thumbnail swiper
 var swiper = new Swiper(".product-swiper", {
       spaceBetween: 10,
       slidesPerView: 4,

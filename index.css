@@ -363,7 +363,7 @@ section:nth-child(even){
     color: var(--secondary-color);
     font-size: 2rem;
     font-weight: bold;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
 }
 
 .box span del {
@@ -387,7 +387,7 @@ section:nth-child(even){
 }
 
 .variation-qty {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .variation-qty span{

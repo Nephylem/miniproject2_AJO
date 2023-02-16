@@ -362,15 +362,11 @@ section:nth-child(even){
 .box span{
     color: var(--secondary-color);
     font-size: 2rem;
-    font-weight: bold;
-    /* margin: 1rem 0; */
+    font-weight: bold; 
+    letter-spacing: 3px;
+    line-height: 3rem;
 }
 
-.box span del {
-    text-decoration: line-through;
-    font-size: 1.4rem;
-    font-style: italic;
-}
 
 .variation-flavor { 
     margin: 10px 0;

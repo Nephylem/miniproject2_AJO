@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Life+Savers&display=swap');
 
+@keyframes fade-in {
+    0% {
+         opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    100% { 
+        opacity: 0;
+    }
+    0% {
+       
+        opacity: 1;
+    }
+}
+
 
 * { 
     margin: 0;
@@ -7,7 +26,7 @@
     box-sizing: border-box;
     font-family: 'Life Savers', cursive;
     text-decoration: none;
-  
+    transition: all .3s ease;
 }
 
 :root {     
@@ -37,8 +56,11 @@ html {
     display: none;
 }
 
+
+
 .modal-overlay.active {
     display: block;
+    animation: fade-in 500ms forwards;
 }
 
 .modal-overlay .fa-times { 
@@ -549,11 +571,13 @@ section:nth-child(even){
         box-shadow: var(--box-shadow);
         padding: 1rem;
         display: none;
+        
     }
     header .navbar.active{
         display: block;
         background-color: var(--secondary-color);
         border-radius: 1rem;
+        animation: fade-in 500ms forwards;
     }
 
     header .navbar a { 

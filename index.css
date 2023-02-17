@@ -41,7 +41,7 @@ html {
     display: block;
 }
 
-.fa-times { 
+.modal-overlay .fa-times { 
     font-size: 2rem;
     line-height: 2rem;
     width: 50px;
@@ -57,7 +57,7 @@ html {
     cursor: pointer;
 }
 
-.fa-times:hover {
+.modal-overlay .fa-times:hover{
     transform: rotate(360deg);
 }
 

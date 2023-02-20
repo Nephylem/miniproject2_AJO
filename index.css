@@ -758,7 +758,6 @@ section:nth-child(even){
 
     .footer-content {
         padding: 1rem;
-        flex-wrap: nowrap;
         flex-direction: column;
         
     } 

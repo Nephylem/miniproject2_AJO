@@ -3,15 +3,15 @@
 let productObj = {
     belly_img : ["index_embed/products/belly/AJO_main.jpg", "index_embed/products/belly/AJO_open.jpg","index_embed/products/belly/AJO_close.jpg","index_embed/products/belly/AJO_chopped.jpg",
     "index_embed/products/belly/AJO_chopped_open.jpg"],
-    belly_text : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam cum iste nobis, id ut, nesciunt nulla, in quod debitis exercitationem dignissimos asperiores perferendis? Quaerat alias voluptatum nostrum voluptas dolorum?",
+    belly_text : "Our mouth-watering and succulent pork belly dish that is slow-roasted to perfection, resulting in a crispy and flavorful outer layer with juicy and tender meat on the inside. We take it a step further by adding our signature spicy and special flavor to create a unique and unforgettable taste experience.",
     chili_garlic_img : ["index_embed/products/chili_garlic/chili_garlic.jpg","index_embed/products/chili_garlic/chili_garlic2.jpg","index_embed/products/chili_garlic/chili_garlic3.jpg","index_embed/products/chili_garlic/chili_garlic4.jpg"],
-    chili_garlic_text : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam cum iste nobis, id ut, nesciunt nulla, in quod debitis exercitationem dignissimos asperiores perferendis? Quaerat alias voluptatum nostrum voluptas dolorum?",
+    chili_garlic_text : "We use only the freshest ingredients to make our chili garlic sauce, ensuring that each jar is packed with authentic and bold flavors. Our sauce is perfect for those who love to add some heat to their meals, and can be used as a dip, marinade, or as an ingredient in cooking.",
     cochinillio_img : ["index_embed/products/cochinillo/cochinillio.jpg", "index_embed/products/cochinillo/cochinillio2.jpg", "index_embed/products/cochinillo/cochinillio3.jpg", "index_embed/products/cochinillo/cochinillio4.jpg"],
-    cochinillio_text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam cum iste nobis, id ut, nesciunt nulla, in quod debitis exercitationem dignissimos asperiores perferendis? Quaerat alias voluptatum nostrum voluptas dolorum?",
+    cochinillio_text: "Our cochinillo is prepared using the highest quality ingredients and traditional cooking techniques, ensuring that it is both delicious and authentic. Whether you're hosting a wedding, corporate event, or any other large gathering, our cochinillo is sure to impress and leave a lasting impression on your guests.",
     sisig_img : ["index_embed/products/sisig/AJO_sisig.jpg", "index_embed/products/sisig/AJO_sisig2.jpg", "index_embed/products/sisig/AJO_sisig3.jpg", "index_embed/products/sisig/AJO_sisig4.jpg"],
-    sisig_text : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam cum iste nobis, id ut, nesciunt nulla, in quod debitis exercitationem dignissimos asperiores perferendis? Quaerat alias voluptatum nostrum voluptas dolorum?", 
+    sisig_text : "Our on-the-go sisig is a modern take on this classic dish that can be enjoyed on-the-go without compromising on taste or quality. We use only the highest quality ingredients to make our sisig, ensuring that each bite is packed with flavor and satisfaction. We carefully prepare and season the pork, resulting in a savory and succulent dish that is sure to please even the most discerning palate.", 
     vinegar_img : ["index_embed/products/vinegar/vinegar1.jpg", "index_embed/products/vinegar/vinegar2.jpg"],
-    vinegar_text : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam cum iste nobis, id ut, nesciunt nulla, in quod debitis exercitationem dignissimos asperiores perferendis? Quaerat alias voluptatum nostrum voluptas dolorum?",
+    vinegar_text : "Our garlic vinegar is a flavorful and aromatic condiment that is perfect for adding a tangy and zesty kick to a variety of dishes. Made with fresh garlic and high-quality vinegar, our garlic vinegar is a versatile condiment that can be used in cooking or as a dipping sauce.",
 }
 
 modalInfoGallery(productObj.belly_img, productObj.belly_text, 0)
@@ -56,7 +56,7 @@ function modalInfoGallery(objImg, objText, productIndex){
                 swiperModalWrapper2.removeChild(swiperModalWrapper2.firstChild)
             }
 
-            productInfoText = ""
+            productInfoText.innerHTML = ""
         })
     })
 }

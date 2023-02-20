@@ -279,6 +279,7 @@ section:nth-child(even){
     font-size: 2rem;
     padding: 1.5rem 0;
     line-height: 3rem;
+    letter-spacing: 2px;
 }
 
 

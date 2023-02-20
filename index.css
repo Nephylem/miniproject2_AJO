@@ -696,7 +696,7 @@ section:nth-child(even){
 
      /* footer-content */
      .footer-content {
-        padding: 1rem;
+        padding-right: 2rem;
         gap: 2rem;
         
     } 

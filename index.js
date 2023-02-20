@@ -106,6 +106,10 @@ menubar.addEventListener('click', ()=>{
 var swiper = new Swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
     autoplay: {
     delay: 3500,
     disableOnInteraction: false,
@@ -124,6 +128,10 @@ var swiper = new Swiper(".reviews-swiper", {
     autoplay: {
     delay: 2500,
     disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     pagination: {
     el: ".swiper-pagination",
@@ -153,6 +161,10 @@ var swiper = new Swiper(".reviews-swiper-two", {
     autoplay: {
     delay: 1500,
     disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     pagination: {
     el: ".swiper-pagination",

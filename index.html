@@ -49,22 +49,45 @@
         </div>
       </div>
     </div>
-    <!--navbar -->
+
+     <!--   cart modal -->
+   <div class="cart-modal-overlay">
+       <div class="cart-modal">
+         <i id="close-btn" class="fas fa-times"></i>
+           <h1 class="cart-is-empty">Cart is empty</h1>
+         
+           <div class="product-rows">
+           </div>
+           <div class="total">
+             <h1 class="cart-total">TOTAL</h1>
+               <span class="total-price">₱0</span>
+                 <button class="purchase-btn">PURCHASE</button>
+           </div>
+         </div>
+   </div>
+   <!--navbar -->
     <header>
-      <a href="#home" class="logo">
-        <img src="index_embed/garlic.png" alt="" />
-      </a>
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About Us</a>
-        <a href="#reviews">Reviews</a>
-      </nav>
-      <div class="icons">
-        <i class="fas fa-bars" id="menu-bars"></i>
-        <a class="fas fa-shopping-cart"></a>
-        <a class="fas fa-user"></a>
-      </div>
+        <a href="#home" class="logo">
+            <img src="index_embed/garlic.png" alt="">
+        </a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#reviews">Reviews</a>
+           
+        </nav>
+        <div class="icons"> 
+            <i class="fas fa-bars menu-bars" ></i>
+            <div class="cart-btn">
+            <a class="fas fa-shopping-cart" id="cart" ></a>
+            <span class ="cart-quantity">0</span>
+
+        </div>
+
+            <a class="fas fa-user"></a>
+            
+        </div>
     </header>
 
     <!-- carousel -->
@@ -94,7 +117,6 @@
                 If you're looking for a truly special dish that is perfect for
                 big occasions, our cochinillo is the perfect choice.
               </p>
-              <a href="#cochinillo" class="btn">Order Now</a>
             </div>
             <div class="slide-image">
               <img src="index_embed/AJO_cochinillo.jpg" alt="" />
@@ -108,7 +130,7 @@
                 Our delicious and convenient way to enjoy this popular Filipino
                 dish.
               </p>
-              <a href="#sisig" class="btn">Order Now</a>
+              <button class="add-to-cart btn">Add to Cart</button>
             </div>
             <div class="slide-image">
               <img src="index_embed/AJO_sisig.jpg" alt="" />
@@ -128,7 +150,7 @@
       <div class="box-container">
         <div class="box belly" id="belly">
           <div class="box-image-container">
-            <img src="index_embed/products/belly/AJO_main.jpg" alt="" />
+            <img class="product-image" src="index_embed/products/belly/AJO_main.jpg" alt="" />
             <a class="fas fa-eye"></a>
           </div>
           <h3>Lechon Belly</h3>
@@ -148,12 +170,13 @@
               <i class="fas fa-plus"></i>
             </div>
           </div>
-          <span class="price">₱ 670.00</span>
-          <a class="btn">Add To Cart</a>
+          <span class="product-price price">₱ 670.00</span>
+          <button class="add-to-cart btn">Add to Cart</button>
         </div>
         <div class="box chili-garlic">
           <div class="box-image-container">
             <img
+              class="product-image"
               src="index_embed/products/chili_garlic/chili_garlic.jpg"
               alt=""
             />
@@ -165,12 +188,13 @@
             <span>1</span>
             <i class="fas fa-plus"></i>
           </div>
-          <span class="price">₱ 99.00</span>
-          <a class="btn">Add To Cart</a>
+          <span class="product-price price">₱ 99.00</span>
+          <button class="add-to-cart btn">Add to Cart</button>
         </div>
         <div class="box cochinillo" id="cochinillo">
           <div class="box-image-container">
             <img
+            class="product-image"
               src="index_embed/products/cochinillo/cochinillio3.jpg"
               alt=""
             />
@@ -182,12 +206,12 @@
             <a class="btn btn-variation">Barkada Size</a>
             <a class="btn btn-variation">Party Size</a>
           </div>
-          <span class="price">₱ 6,400.00</span>
-          <a class="btn">Add To Cart</a>
+          <span class="product-price price">₱ 6400.00</span>
+          <button class="add-to-cart btn">Add to Cart</button>
         </div>
         <div class="box sisig" id="sisig">
           <div class="box-image-container">
-            <img src="index_embed/products/sisig/AJO_sisig2.jpg" alt="" />
+            <img class="product-image" src="index_embed/products/sisig/AJO_sisig2.jpg" alt="" />
             <a class="fas fa-eye"></a>
           </div>
           <h3>Pork Sisig</h3>
@@ -200,12 +224,12 @@
             <span>1</span>
             <i class="fas fa-plus"></i>
           </div>
-          <span class="price">₱ 150.00</span>
-          <a class="btn">Add To Cart</a>
+          <span class="product-price price">₱ 150.00</span>
+          <button class="add-to-cart btn">Add to Cart</button>
         </div>
         <div class="box vinegar">
           <div class="box-image-container">
-            <img src="index_embed/products/vinegar/vinegar2.jpg" alt="" />
+            <img  class="product-image" src="index_embed/products/vinegar/vinegar2.jpg" alt="" />
             <a class="fas fa-eye"></a>
           </div>
           <h3>Garlic Vinegar</h3>
@@ -214,8 +238,8 @@
             <span>1</span>
             <i class="fas fa-plus"></i>
           </div>
-          <span class="price">₱ 129.00</span>
-          <a class="btn">Add To Cart</a>
+          <span class="product-price price">₱ 129.00</span>
+          <button class="add-to-cart btn">Add to Cart</button>
         </div>
       </div>
     </section>
@@ -373,7 +397,10 @@
   </body>
 
   <!-- swiperjs  -->
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+
   <script src="index.js"></script>
+
 </html>

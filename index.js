@@ -383,7 +383,7 @@ function bellyQtyVarBtn(
 // function for vinegar and chili garlic quantity buttons
 
 function vinegarChiliQtyBtn(qtyBtn, qtyInner, priceObj, priceInner) {
-  clicks = 1;
+  let clicks = 1;
 
   qtyBtn[0].addEventListener("click", () => {
     clicks--;

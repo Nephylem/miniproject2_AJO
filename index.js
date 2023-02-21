@@ -482,9 +482,9 @@ function sisigQtyVarBtn(qtyBtn, qtyInner, priceObj, priceInner, btnVariation) {
 // function for cochinillo size buttons
 
 function cochinilloSizeBtn(priceObj, priceInner, btnVariation) {
-    let family_price = priceObj.price[0]
-    let barkada_price = priceObj.price[1]
-    let party_price = priceObj.price[2]
+  let family_price = priceObj.price[0];
+  let barkada_price = priceObj.price[1];
+  let party_price = priceObj.price[2];
   for (element of btnVariation) {
     element.addEventListener("click", (event) => {
       event.target.classList.add("disabled");
@@ -494,16 +494,16 @@ function cochinilloSizeBtn(priceObj, priceInner, btnVariation) {
         }
       });
       if (event.target.innerHTML == "Barkada Size") {
-        price = barkada_price.toLocaleString('en-US')
-        priceInner.innerHTML = `₱ ${price}.00`
+        price = barkada_price.toLocaleString("en-US");
+        priceInner.innerHTML = `₱ ${price}.00`;
       }
       if (event.target.innerHTML == "Family Size") {
-        price = family_price.toLocaleString('en-US')
-        priceInner.innerHTML = `₱ ${price}.00`
+        price = family_price.toLocaleString("en-US");
+        priceInner.innerHTML = `₱ ${price}.00`;
       }
       if (event.target.innerHTML == "Party Size") {
-        price = party_price.toLocaleString('en-US')
-        priceInner.innerHTML = `₱ ${price}.00`
+        price = party_price.toLocaleString("en-US");
+        priceInner.innerHTML = `₱ ${price}.00`;
       }
     });
   }

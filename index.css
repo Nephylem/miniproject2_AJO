@@ -648,6 +648,10 @@ section:nth-child(even){
     gap: 20px;
     
 }
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
 .footer-content h3 {
     letter-spacing: 3px;
 }

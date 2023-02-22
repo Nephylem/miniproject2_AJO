@@ -562,6 +562,7 @@ sisigQtyVarBtn(
   sisig_flavor_variation
 );
 
+
 // add products to cart
 const addToCart = document.getElementsByClassName('add-to-cart');
 const productRow = document.getElementsByClassName('product-row');
@@ -675,8 +676,6 @@ function purchaseBtnClicked () {
 // end of purchase items
 
 //alert user if cart is empty
-
-
 
 
 

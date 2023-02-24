@@ -563,7 +563,59 @@ sisigQtyVarBtn(
 );
 
 
-// add products to cart
+
+// for messenger widget
+// <!-- Your SDK code -->
+
+var chatbox = document.getElementById("fb-customer-chat");
+chatbox.setAttribute("page_id", "116813004661401");
+chatbox.setAttribute("attribution", "biz_inbox");
+
+window.fbAsyncInit = function () {
+  FB.init({
+    xfbml: true,
+    version: "v16.0",
+  });
+};
+
+(function (d, s, id) {
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk");
+
+// scrollspy
+
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll(".navbar a");
+
+window.onscroll = () => {
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector(`header nav a[href*=${id}]`)
+          .classList.add("active");
+      });
+    }
+  });
+};
+
+
+
+
+
+
+// cart functionality
 const addToCart = document.getElementsByClassName('add-to-cart');
 const productRow = document.getElementsByClassName('product-row');
 
@@ -676,51 +728,3 @@ function purchaseBtnClicked () {
 // end of purchase items
 
 //alert user if cart is empty
-
-
-
-// for messenger widget
-// <!-- Your SDK code -->
-
-var chatbox = document.getElementById("fb-customer-chat");
-chatbox.setAttribute("page_id", "116813004661401");
-chatbox.setAttribute("attribution", "biz_inbox");
-
-window.fbAsyncInit = function () {
-  FB.init({
-    xfbml: true,
-    version: "v16.0",
-  });
-};
-
-(function (d, s, id) {
-  var js,
-    fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-  fjs.parentNode.insertBefore(js, fjs);
-})(document, "script", "facebook-jssdk");
-
-// scrollspy
-
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll(".navbar a");
-
-window.onscroll = () => {
-  sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach((links) => {
-        links.classList.remove("active");
-        document
-          .querySelector(`header nav a[href*=${id}]`)
-          .classList.add("active");
-      });
-    }
-  });
-};

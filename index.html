@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- swiperjs -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>AJO Foods Co.</title>
+  </head>
+  <body>
+    <!-- modal for view btn -->
+    <div class="modal-overlay">
+      <a class="fas fa-times"></a>
+      <div class="modal-for-view">
+        <div class="product-info-container">
+          <div class="product-info-thumbnail">
+            <div class="swiper product-swiper2">
+              <div class="swiper-wrapper product-wrapper"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div class="swiper product-swiper">
+              <div class="swiper-wrapper product-wrapper"></div>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--   cart modal -->
+    <div class="cart-modal-overlay">
+      <div class="cart-modal">
+        <i id="close-btn" class="fas fa-times"></i>
+        <!-- <h1 class="cart-is-empty">Cart is empty</h1> -->
+
+        <div class="product-rows"></div>
+        <div class="total">
+          <h1 class="cart-total">TOTAL</h1>
+          <span class="total-price">₱0</span>
+          <a class="purchase-btn btn">Check Out</a>
+        </div>
+      </div>
+    </div>
+    <!--navbar -->
+    <header>
+      <a href="#home" class="logo">
+        <img src="index_embed/garlic.png" alt="" />
+      </a>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <div class="icons">
+        <i class="fas fa-bars menu-bars"></i>
+        <a class="fas fa-shopping-cart" id="cart"><span class="cart-quantity">0</span></a>
+        <button class="login-btn"><a class="fas fa-user"></a></button>
+      </div>
+    </header>
+
+    <!-- modal -->
+    <div class="login-modal active">
+      <i class="fas fa-times"></i>
+      <div class="login-overlay">
+        <h1>Login to AJO Foods Co.</h1>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+          
+          <button type="submit">Login</button>
+      </div>
+  </div>
+
+    <!-- carousel -->
+    <section class="home" id="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper wrapper">
+          <div class="swiper-slide slide">
+            <div class="slide-content">
+              <span>Our Best Selling,</span>
+              <h3>Lechon Belly Roll</h3>
+              <p>
+                If you're a fan of pork belly dishes, or simply love trying new
+                and unique flavors, our lechon belly with spicy and special
+                flavor is a must-try!
+              </p>
+              <a href="#belly" class="btn">Order Now</a>
+            </div>
+            <div class="slide-image">
+              <img src="index_embed/AJO_cover.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide slide">
+            <div class="slide-content">
+              <span>Our Must-Try,</span>
+              <h3>Cochinillo</h3>
+              <p>
+                If you're looking for a truly special dish that is perfect for
+                big occasions, our cochinillo is the perfect choice.
+              </p>
+              <a href="#cochinillo" class="btn">Order Now</a>
+            </div>
+            <div class="slide-image">
+              <img src="index_embed/AJO_cochinillo.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-slide slide">
+            <div class="slide-content">
+              <span>Our Ready To Cook,</span>
+              <h3>Sisig</h3>
+              <p>
+                Our delicious and convenient way to enjoy this popular Filipino
+                dish.
+              </p>
+              <a href="#sisig" class="btn">Order Now</a>
+            </div>
+            <div class="slide-image">
+              <img src="index_embed/AJO_sisig.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- product cards -->
+    <section class="products" id="products">
+      <h3 class="sub-heading">AJO Products</h3>
+      <h1 class="heading">All Products</h1>
+      <div class="box-container">
+        <div class="box belly" id="belly">
+          <div class="box-image-container">
+            <img
+              class="product-image"
+              src="index_embed/products/belly/AJO_main.jpg"
+              alt=""
+            />
+            <a class="fas fa-eye"></a>
+          </div>
+          <h3>Lechon Belly</h3>
+
+          <div class="variation-container">
+            <div class="variation-flavor">
+              <a class="btn btn-variation disabled">Special</a>
+              <a class="btn btn-variation">Spicy</a>
+            </div>
+            <div class="variation-chopped">
+              <a class="btn btn-variation disabled">Whole</a>
+              <a class="btn btn-variation">Chopped</a>
+            </div>
+            <div class="variation-qty">
+              <i class="fas fa-minus"></i>
+              <span>1 Kilo</span>
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+          <span class="product-price price">₱ 670.00</span>
+          <a class="add-to-cart btn">Add to Cart</a>
+        </div>
+        <div class="box chili-garlic">
+          <div class="box-image-container">
+            <img
+              class="product-image"
+              src="index_embed/products/chili_garlic/chili_garlic.jpg"
+              alt=""
+            />
+            <a class="fas fa-eye"></a>
+          </div>
+          <h3>Chili Garlic</h3>
+          <div class="variation-qty">
+            <i class="fas fa-minus"></i>
+            <span>1</span>
+            <i class="fas fa-plus"></i>
+          </div>
+          <span class="product-price price">₱ 99.00</span>
+          <a class="add-to-cart btn">Add to Cart</a>
+        </div>
+        <div class="box cochinillo" id="cochinillo">
+          <div class="box-image-container">
+            <img
+              class="product-image"
+              src="index_embed/products/cochinillo/cochinillio3.jpg"
+              alt=""
+            />
+            <a class="fas fa-eye"></a>
+          </div>
+          <h3>Cochinllo</h3>
+          <div class="variation-size">
+            <a class="btn btn-variation disabled">Family Size</a>
+            <a class="btn btn-variation">Barkada Size</a>
+            <a class="btn btn-variation">Party Size</a>
+          </div>
+          <span class="product-price price">₱ 6400.00</span>
+          <a class="add-to-cart btn">Add to Cart</a>
+        </div>
+        <div class="box sisig" id="sisig">
+          <div class="box-image-container">
+            <img
+              class="product-image"
+              src="index_embed/products/sisig/AJO_sisig2.jpg"
+              alt=""
+            />
+            <a class="fas fa-eye"></a>
+          </div>
+          <h3>Pork Sisig</h3>
+          <div class="variation-flavor">
+            <a class="btn btn-variation disabled">Regular</a>
+            <a class="btn btn-variation">Spicy</a>
+          </div>
+          <div class="variation-qty">
+            <i class="fas fa-minus"></i>
+            <span>1</span>
+            <i class="fas fa-plus"></i>
+          </div>
+          <span class="product-price price">₱ 150.00</span>
+          <a class="add-to-cart btn">Add to Cart</a>
+        </div>
+        <div class="box vinegar">
+          <div class="box-image-container">
+            <img
+              class="product-image"
+              src="index_embed/products/vinegar/vinegar2.jpg"
+              alt=""
+            />
+            <a class="fas fa-eye"></a>
+          </div>
+          <h3>Garlic Vinegar</h3>
+          <div class="variation-qty">
+            <i class="fas fa-minus"></i>
+            <span>1</span>
+            <i class="fas fa-plus"></i>
+          </div>
+          <span class="product-price price">₱ 129.00</span>
+          <a class="add-to-cart btn">Add to Cart</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+
+    <section class="about" id="about">
+      <h3 class="sub-heading">Things you need to know!</h3>
+      <h1 class="heading">About Us</h1>
+      <hr />
+      <div class="about-container">
+        <div class="video-background">
+          <video autoplay loop muted>
+            <source src="index_embed/about_page/AJO-aboutCover.mp4" />
+          </video>
+        </div>
+        <div class="about-info">
+          <h3>We are proudly Q-ASIA Excellence Seal Awardees!</h3>
+          <p>
+            We are proud to announce that our product has been recognized for
+            its exceptional quality and has been awarded the prestigious Q Asia
+            Seal. This recognition is a testament to our commitment to
+            delivering high-quality products that meet the needs of our
+            customers. The Q Asia Seal is a prestigious award that recognizes
+            products that demonstrate a commitment to quality excellence. Our
+            product underwent rigorous testing and evaluation by a panel of
+            experts to ensure that it met the standards for quality,
+            reliability, and performance. We are honored to have received this
+            recognition and will continue to strive for excellence in all that
+            we do.
+          </p>
+          <img src="index_embed/about_page/QAsia.png" alt="" />
+          <img src="index_embed/about_page/QAsia2.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- reviews -->
+    <section class="reviews" id="reviews">
+      <h3 class="sub-heading">Check out Our Satisfied Customers Feedback!</h3>
+      <h1 class="heading">Reviews</h1>
+      <div class="swiper reviews-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/main-1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/main-2.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/main-3.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/main-4.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/main-5.jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <div class="swiper reviews-swiper-two" id="reviews2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/2.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/3.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/4.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/5.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/6.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/7.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/8.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/9.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/10.jpg" alt="" />
+          </div>
+          <div class="swiper-slide reviews-swiper-slide">
+            <img src="index_embed/reviews/11.jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div class="footer" id="footer">
+      <div class="footer-content">
+        <div class="branches">
+          <h3>Branches</h3>
+          <a href="https://goo.gl/maps/KTFSGgo3oS3YQSpB8" target="_blank"
+            ><i class="fas fa-location-arrow"></i>Toril, Davao City
+          </a>
+          <a href="https://goo.gl/maps/kMUGBqdPavH2DEZp7" target="_blank"
+            ><i class="fas fa-location-arrow"></i>Lanang, Davao City
+          </a>
+        </div>
+        <hr />
+        <div class="overview">
+          <h3>Overview</h3>
+          <div class="navinfo">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#reviews">Reviews</a>
+          </div>
+        </div>
+
+        <hr />
+        <div class="social-media">
+          <h3>Social Media</h3>
+          <div class="icons">
+            <a
+              href="https://www.facebook.com/ajofoodsco"
+              class="fab fa-facebook"
+              target="_blank"
+            ></a>
+            <a
+              href="https://www.instagram.com/ajofoodscodvo/"
+              class="fab fa-instagram"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <small><p>© 2023 Group 8, All Rights Reserved.</p></small>
+    </div>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+  </body>
+
+  <!-- swiperjs  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="index.js"></script>
+</html>

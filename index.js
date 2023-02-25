@@ -218,33 +218,7 @@ var swiper = new Swiper(".reviews-swiper-two", {
   },
 });
 
-// for products add to cart functionality
 
-// open cart modal
-const cart = document.querySelector('#cart');
-const cartModalOverlay = document.querySelector('.cart-modal-overlay');
-
-cart.addEventListener('click', () => {
-  if (cartModalOverlay.style.transform === 'translateX(-200%)'){
-    cartModalOverlay.style.transform = 'translateX(0)';
-  } else {
-    cartModalOverlay.style.transform = 'translateX(-200%)';
-  }
-})
-// end of open cart modal
-
-// close cart modal
-const closeBtn = document.querySelector ('#close-btn');
-
-closeBtn.addEventListener('click', () => {
-  cartModalOverlay.style.transform = 'translateX(-200%)';
-});
-
-cartModalOverlay.addEventListener('click', (e) => {
-  if (e.target.classList.contains('cart-modal-overlay')){
-    cartModalOverlay.style.transform = 'translateX(-200%)'
-  }
-})
 
 let productPrice = [
   {
@@ -521,15 +495,15 @@ function cochinilloSizeBtn(priceObj, priceInner, btnVariation) {
       });
       if (event.target.innerHTML == "Barkada Size") {
         price = barkada_price.toLocaleString("en-US");
-        priceInner.innerHTML = `₱ ${price}`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       }
       if (event.target.innerHTML == "Family Size") {
         price = family_price.toLocaleString("en-US");
-        priceInner.innerHTML = `₱ ${price}`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       }
       if (event.target.innerHTML == "Party Size") {
         price = party_price.toLocaleString("en-US");
-        priceInner.innerHTML = `₱ ${price}`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       }
     });
   }
@@ -728,3 +702,31 @@ function purchaseBtnClicked () {
 // end of purchase items
 
 //alert user if cart is empty
+
+// for products add to cart functionality
+
+// open cart modal
+const cart = document.querySelector('#cart');
+const cartModalOverlay = document.querySelector('.cart-modal-overlay');
+
+cart.addEventListener('click', () => {
+  if (cartModalOverlay.style.transform === 'translateX(-200%)'){
+    cartModalOverlay.style.transform = 'translateX(0)';
+  } else {
+    cartModalOverlay.style.transform = 'translateX(-200%)';
+  }
+})
+// end of open cart modal
+
+// close cart modal
+const closeBtn = document.querySelector ('#close-btn');
+
+closeBtn.addEventListener('click', () => {
+  cartModalOverlay.style.transform = 'translateX(-200%)';
+});
+
+cartModalOverlay.addEventListener('click', (e) => {
+  if (e.target.classList.contains('cart-modal-overlay')){
+    cartModalOverlay.style.transform = 'translateX(-200%)'
+  }
+})

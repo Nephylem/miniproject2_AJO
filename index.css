@@ -914,8 +914,10 @@ section:nth-child(even) {
 
 .product-quantity {
   width: 4rem;
-  font-size: 2rem;
   margin-left: 3rem;
+  color:#fff;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 .remove-btn {

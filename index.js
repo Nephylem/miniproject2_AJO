@@ -342,8 +342,7 @@ function bellyQtyVarBtn(
         }
         qtyInner.innerHTML = `${kilo[click]} Kilo`;
         price = priceObj.spicy * kilo[click];
-        price_converted = price.toLocaleString("us-EN");
-        priceInner.innerHTML = `₱ ${price_converted}.00`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       });
       qtyBtn[1].addEventListener("click", () => {
         click++;
@@ -352,8 +351,7 @@ function bellyQtyVarBtn(
         }
         qtyInner.innerHTML = `${kilo[click]} Kilo`;
         price = priceObj.spicy * kilo[click];
-        price_converted = price.toLocaleString("us-EN");
-        priceInner.innerHTML = `₱ ${price_converted}.00`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       });
     }
     if (arguments[0] == "special") {
@@ -364,8 +362,7 @@ function bellyQtyVarBtn(
         }
         qtyInner.innerHTML = `${kilo[click]} Kilo`;
         price = priceObj.special * kilo[click];
-        price_converted = price.toLocaleString("us-EN");
-        priceInner.innerHTML = `₱ ${price_converted}.00`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       });
       qtyBtn[1].addEventListener("click", () => {
         click++;
@@ -374,8 +371,7 @@ function bellyQtyVarBtn(
         }
         qtyInner.innerHTML = `${kilo[click]} Kilo`;
         price = priceObj.special * kilo[click];
-        price_converted = price.toLocaleString("us-EN");
-        priceInner.innerHTML = `₱ ${price_converted}.00`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       });
     }
   }
@@ -392,8 +388,7 @@ function vinegarChiliQtyBtn(qtyBtn, qtyInner, priceObj, priceInner) {
     }
     qtyInner.innerHTML = clicks;
     price = priceObj.price * clicks;
-    price_converted = price.toLocaleString("en-US");
-    priceInner.innerHTML = `₱ ${price_converted}.00`;
+    priceInner.innerHTML = `₱ ${price}.00`;
   });
   qtyBtn[1].addEventListener("click", () => {
     clicks++;
@@ -402,8 +397,7 @@ function vinegarChiliQtyBtn(qtyBtn, qtyInner, priceObj, priceInner) {
     }
     qtyInner.innerHTML = clicks;
     price = priceObj.price * clicks;
-    price_converted = price.toLocaleString("en-US");
-    priceInner.innerHTML = `₱ ${price_converted}.00`;
+    priceInner.innerHTML = `₱ ${price}.00`;
   });
 }
 
@@ -439,8 +433,7 @@ function sisigQtyVarBtn(qtyBtn, qtyInner, priceObj, priceInner, btnVariation) {
         }
         qtyInner.innerHTML = click;
         price = priceObj.regular * click;
-        price_converted = price.toLocaleString("en-US");
-        priceInner.innerHTML = `₱ ${price_converted}.00`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       });
       qtyBtn[1].addEventListener("click", () => {
         click++;
@@ -449,8 +442,7 @@ function sisigQtyVarBtn(qtyBtn, qtyInner, priceObj, priceInner, btnVariation) {
         }
         qtyInner.innerHTML = click;
         price = priceObj.spicy * click;
-        price_converted = price.toLocaleString("en-US");
-        priceInner.innerHTML = `₱ ${price_converted}.00`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       });
     }
     if (arguments[0] == "regular") {
@@ -461,8 +453,7 @@ function sisigQtyVarBtn(qtyBtn, qtyInner, priceObj, priceInner, btnVariation) {
         }
         qtyInner.innerHTML = click;
         price = priceObj.regular * click;
-        price_converted = price.toLocaleString("en-US");
-        priceInner.innerHTML = `₱ ${price_converted}.00`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       });
       qtyBtn[1].addEventListener("click", () => {
         click++;
@@ -472,8 +463,7 @@ function sisigQtyVarBtn(qtyBtn, qtyInner, priceObj, priceInner, btnVariation) {
 
         qtyInner.innerHTML = click;
         price = priceObj.regular * click;
-        price_converted = price.toLocaleString("en-US");
-        priceInner.innerHTML = `₱ ${price_converted}.00`;
+        priceInner.innerHTML = `₱ ${price}.00`;
       });
     }
   }
@@ -494,15 +484,15 @@ function cochinilloSizeBtn(priceObj, priceInner, btnVariation) {
         }
       });
       if (event.target.innerHTML == "Barkada Size") {
-        price = barkada_price.toLocaleString("en-US");
+        price = barkada_price
         priceInner.innerHTML = `₱ ${price}.00`;
       }
       if (event.target.innerHTML == "Family Size") {
-        price = family_price.toLocaleString("en-US");
+        price = family_price
         priceInner.innerHTML = `₱ ${price}.00`;
       }
       if (event.target.innerHTML == "Party Size") {
-        price = party_price.toLocaleString("en-US");
+        price = party_price
         priceInner.innerHTML = `₱ ${price}.00`;
       }
     });
@@ -598,17 +588,22 @@ for (var i = 0; i < addToCart.length; i++) {
   button.addEventListener('click', addToCartClicked)
 }
 
+
+
+
 function addToCartClicked (event) {
   button = event.target;
   var cartItem = button.parentElement;
   var price = cartItem.getElementsByClassName('product-price')[0].innerText;
+  var bellyQtyVarBtn = cartItem.getElementsByClassName('variation-qty')[0].innerText;
+
   
   var imageSrc = cartItem.getElementsByClassName('product-image')[0].src;
-  addItemToCart (price, imageSrc);
+  addItemToCart (price, imageSrc , bellyQtyVarBtn );
   updateCartPrice()
 }
 
-function addItemToCart (price, imageSrc) {
+function addItemToCart (price, imageSrc , bellyQtyVarBtn ) {
   var productRow = document.createElement('div');
   productRow.classList.add('product-row');
   var productRows = document.getElementsByClassName('product-rows')[0];
@@ -625,7 +620,7 @@ function addItemToCart (price, imageSrc) {
   <div class="product-row">
         <img class="cart-image" src="${imageSrc}" alt="">
         <span class ="cart-price">${price}</span>
-        <input class="product-quantity" type="number" value="1">
+        <span class ="product-quantity">${bellyQtyVarBtn}</span>
         <button class="remove-btn">Remove</button>
         </div>
         
@@ -674,7 +669,7 @@ function updateCartPrice() {
   var quantityElement = cartRow.getElementsByClassName('product-quantity')[0]
   var price = parseFloat(priceElement.innerText.replace('₱', ''))
   var quantity = quantityElement.value
-  total = total + (price * quantity )
+  total = total + (price )
     
   }
   document.getElementsByClassName('total-price')[0].innerText =  '₱' + total

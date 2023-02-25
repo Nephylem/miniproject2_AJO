@@ -730,3 +730,33 @@ cartModalOverlay.addEventListener('click', (e) => {
     cartModalOverlay.style.transform = 'translateX(-200%)'
   }
 })
+
+
+
+
+// for log in modal 
+
+
+let loginBtn = document.querySelector('.icons .fa-user');
+let loginOverlay = document.querySelector('.login-modal-overlay');
+let loginCloseBtn =  document.querySelector('.login-modal-overlay .fa-times');
+
+loginBtn.addEventListener('click', ()=>{
+  loginOverlay.classList.add('active')
+})
+
+loginCloseBtn.addEventListener('click', ()=>{
+  loginOverlay.classList.remove('active')
+})
+
+let signUpButton = document.querySelector('#signUp');
+let signInButton = document.querySelector('#signIn');
+let container = document.querySelector('.modal-for-login');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});

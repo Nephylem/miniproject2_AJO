@@ -1177,9 +1177,11 @@ section:nth-child(even) {
 }
 
 .product-quantity {
-  width: 4rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-left: 3rem;
+  background-color: #fff;
+  padding: 0 .5rem;
+  font-weight: bold;
 }
 
 .remove-btn {

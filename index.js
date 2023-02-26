@@ -594,14 +594,18 @@ function addToCartClicked(event) {
   var cartItem = button.parentElement;
   var price = cartItem.getElementsByClassName("product-price")[0].innerText;
   var imageSrc = cartItem.getElementsByClassName("product-image")[0].src;
-  var bellyQtyVarBtn =
-    cartItem.getElementsByClassName("variation-qty")[0].innerText;
+  try {
+    var qtyContainer =
+      cartItem.getElementsByClassName("variation-qty")[0].innerText;
+  } catch {
+    qtyContainer = cartItem.querySelector(".disabled").innerText;
+  }
 
-  addItemToCart(price, imageSrc, bellyQtyVarBtn);
+  addItemToCart(price, imageSrc, qtyContainer);
   updateCartPrice();
 }
 
-function addItemToCart(price, imageSrc, bellyQtyVarBtn) {
+function addItemToCart(price, imageSrc, qtyContainer) {
   var productRow = document.createElement("div");
   productRow.classList.add("product-row");
   var productRows = document.getElementsByClassName("product-rows")[0];
@@ -618,7 +622,7 @@ function addItemToCart(price, imageSrc, bellyQtyVarBtn) {
   <div class="product-row">
         <img class="cart-image" src="${imageSrc}" alt="">
         <span class ="cart-price">${price}</span>
-        <span class ="product-quantity">${bellyQtyVarBtn}</span>
+        <span class ="product-quantity">${qtyContainer}</span>
         <button class="remove-btn">Remove</button>
         </div>
         

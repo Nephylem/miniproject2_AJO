@@ -1,4 +1,4 @@
-# AJO-Group-8
+# AJO Foods Co.
 
 This is an actual business owned by a friend of mine here in Philippines.
 
